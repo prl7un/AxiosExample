@@ -1,12 +1,17 @@
-import React, { useEffect, useState, useCallback} from 'react';
+import React, { useState} from 'react';
 
 
 function App() {
-  
-  
+  const [num, setNum] = useState(0);
+  const style = {
+    color: "red",
+    width:`${num}px`,
+    height:`${300-num}px`
+  }
   
   return (
-    <div>  
+    <div style={style}>  
+      <button onClick={setNum(num+1)}>click</button>
     </div>
   );
 }
