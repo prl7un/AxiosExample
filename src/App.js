@@ -8,15 +8,11 @@ export const initial_state = {
 
 export const Reducer = (state=initial_state, action) => {
   switch (action.type){
-    case "one":
+    case "ONE":
       return {
 
       };
-    case "one":
-      return {
-
-      };
-    case "one":
+    case "TWO":
       return {
 
       };
@@ -32,8 +28,8 @@ function App() {
     <div>  
       <h1>memeber list</h1>
       <p></p>
-      <button onClick={}>합류</button>
-      <button onClick={}>휴식</button>
+      <button onClick={dispatch({type:ONE, })}>합류</button>
+      <button onClick={dispatch({type:TWO, })}>휴식</button>
     </div>
   );
 }
