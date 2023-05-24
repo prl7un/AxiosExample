@@ -10,11 +10,13 @@ export const Reducer = (state=initial_state, action) => {
   switch (action.type){
     case "ONE":
       return {
-
+        ...state,
+        isOffline: !isOffline
       };
     case "TWO":
       return {
-
+        ...state,
+        skilscore: skilscore+1
       };
     default:
       return state;
