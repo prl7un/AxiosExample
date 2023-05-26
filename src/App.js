@@ -1,37 +1,27 @@
-import React, { useState , useReducer} from 'react';
-
-export const initial_state = {
-  isOffline: false,
-  age: 30,
-  skilscore:10 
-}
-const Reducer = (state, action) => {
-  switch (action.type){
-    case "ONE":
-      return {
-        ...state,
-        isOffline: !state.isOffline
-      };
-    case "TWO":
-      return {
-        ...state,
-        skilscore: state.skilscore+1
-      };
-    default:
-      return state;
-  }
-};
+import React, { useCallback, useState } from 'react';
+import Ramen from './Ramen'
+import Gimbab from './Gimbab';
 
 function App() {
-  const [state, dispatch] = useReducer(Reducer, initial_state);
+  const [orderNumber, setOrderNumber] = useState(0);
 
+  const incrementOrderNumber = () => {
+    setOrderNumber(orderNumber + 1);
+  };
+
+  
+  const order = useCallback(()=>{
+    console.log('주문완료');
+  }, []);
+  
   return (
-    <div>  
-      <h1>아카데미</h1>
-      <button onClick={()=>dispatch({type:"ONE"})}>출입</button>
-      <button onClick={()=>dispatch({type:"TWO" })}>스킬업</button>
-      <p>{state.isOffline ? "입장": "퇴장"}</p>
-      <p>스킬점수{state.skilscore}</p>
+    <div style ={{ border: '2px solid grey', padding: '15px'}}>  
+      <h1>메뉴판</h1> 
+      <p>주문인원: {orderNumber}</p>
+      <button onClick={incrementOrderNumber}>주문인원추가</button>
+
+      <Ramen name={"치즈"} o={order}/>
+      <Gimbab name={"새우"} o={order}/>
     </div>
   );
 }
