@@ -1,20 +1,25 @@
-import React from 'react';
-import useSlary from './useSalary'
+import { useRef, useState } from "react";
 
 
 function App() {
-  const [person1 ,mon1, year1] = useSlary('A', 200);
-  const [person2 ,mon2, year2] = useSlary('B', 300);
+
+  const [val, setVal] = useState(10);
+  let RR = useRef(10);
+  let v = 10;
+
+
+  const mult= (a) => {
+    a.current = setVal(a.current*10);
+  }
+
   return (
-    <div>  
-      <label>
-        information:
-        <p>{person1}의 월급 {mon1}, 연봉 {year1}</p>
-      </label>
-      <label>
-        information:
-        <p>{person2}의 월급 {mon2}, 연봉 {year2}</p>
-      </label>
+    <div> 
+      <p>{v}</p>
+      <button onClick={(v) =>(v*10)}>값변화</button>
+      <hr></hr>
+      <br></br>
+      <p>{val}</p>
+      <button onClick={mult}>Ref변화</button>
     </div>
   );
 }
