@@ -1,20 +1,20 @@
-import { useRef, useState } from "react";
+import { useRef} from "react";
 
 
 function App() {
 
-  const [val, setVal] = useState();
-  const R = useRef(10);
+  const R = useRef(3);
 
-  const mult= (a) => {
-    a.current = setVal(a.current*10);
+  const mult= () => {
+    R.current = R.current*10;
+    console.log(R.current)
   }
 
   return (
     <div> 
       <hr></hr>
       <p>{R.current}</p>
-      <button onClick={() => {mult(R)}}>Ref변화</button>
+      <button onClick={mult}>Ref변화</button>
       <hr></hr>
     </div>
   );
