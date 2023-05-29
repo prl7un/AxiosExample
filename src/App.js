@@ -1,4 +1,4 @@
-import { useRef, useState} from "react";
+import { useRef} from "react";
 
 
 function App() {
@@ -10,12 +10,13 @@ function App() {
     console.log(R.current)
   }
 
-  const t_Ref = useRef('');
+  let t_Ref = useRef(0);
 
-  const [value, setValue] = useState('');
-  const cha = (e) => {
-    setValue(e.target.value);
+  const cha = () => {
+    t_Ref = t_Ref + 1;
+    console.log(t_Ref)
   }
+  
 
   return (
     <div> 
@@ -23,8 +24,7 @@ function App() {
       <p>{R.current}</p>
       <button onClick={mult}>Ref변화</button>
       <hr></hr>
-      <input type="text" ref={t_Ref} onChange={cha}/>
-      <p>{t_Ref.current}</p>
+      <input type="number" name="box" ref={t_Ref} onChange={cha}/>
     </div>
   );
 }
