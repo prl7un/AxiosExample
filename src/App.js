@@ -1,30 +1,32 @@
-import { useRef} from "react";
+import { useState} from "react";
 
 
 function App() {
-
-  const R = useRef(3);
-
-  const mult= () => {
-    R.current = R.current*10;
-    console.log(R.current)
-  }
-
-  let t_Ref = useRef(0);
-
-  const cha = () => {
-    t_Ref = t_Ref + 1;
-    console.log(t_Ref)
-  }
-  
+  const [first, setFirst] = useState(Math.ceil(Math.random()*30));
+  const [second, setSecond] = useState(Math.ceil(Math.random()*30));
+  const [value, setValue] = useState('');
+  var [result, setResult] = useState('');  
 
   return (
     <div> 
-      <hr></hr>
-      <p>{R.current}</p>
-      <button onClick={mult}>Ref변화</button>
-      <hr></hr>
-      <input type="number" name="box" ref={t_Ref} onChange={cha}/>
+      <div>{first} 곱하기 {second}는?</div>
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        if (parseInt(value) === first*second){
+          setResult('정답')
+          setFirst(Math.ceil(Math.random()*30));
+          setSecond(Math.ceil(Math.random()*30));
+          setValue('')
+        }
+        else{
+          setResult('오답')
+          setValue('')
+        }
+      }}>  
+        <input type = "number" value={value} onChange={(e) => setValue(e.target.value)}/>
+        <button>입력!</button>
+      </form>
+      <div>{result}</div>
     </div>
   );
 }
