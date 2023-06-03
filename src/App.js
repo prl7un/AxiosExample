@@ -13,7 +13,7 @@ function App() {
       <form onSubmit={(e) => {
         e.preventDefault();
         if (parseInt(value) === first*second){
-          setResult('정답')
+          setResult('정답' + value)
           setFirst(Math.ceil(Math.random()*30));
           setSecond(Math.ceil(Math.random()*30));
           setValue('')
