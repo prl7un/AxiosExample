@@ -8,7 +8,7 @@ function App() {
   var [result, setResult] = useState('');  
 
   return (
-    <div> 
+    <> 
       <div>{first} 곱하기 {second}는?</div>
       <form onSubmit={(e) => {
         e.preventDefault();
@@ -27,7 +27,7 @@ function App() {
         <button>입력!</button>
       </form>
       <div>{result}</div>
-    </div>
+    </>
   );
 }
 
