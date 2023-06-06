@@ -7,3 +7,16 @@ function J<T>(init1: T, init2: T): [T, T[]] {
   let arr:T[] = [init1, init2];
   return [init1, arr];
 }
+
+
+type 함수타입1 = (t : boolean) => string;
+
+let 함수1 : 함수타입1 = function(a){
+  if(a===true){
+    return 'yes'
+  }
+  else{
+    return 'no'
+  }
+}
+
