@@ -20,3 +20,9 @@ let 함수1 : 함수타입1 = function(a){
   }
 }
 
+
+let arr : string[] = ['1', '2', '3']
+
+let res : number[] = arr.map(function(i:string){
+  return Number(i)
+})
