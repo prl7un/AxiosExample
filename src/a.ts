@@ -26,3 +26,6 @@ let arr : string[] = ['1', '2', '3']
 let res : number[] = arr.map(function(i:string){
   return Number(i)
 })
+
+let ar1: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+let res2: number[] = ar1.filter((v:number) => v%3 === 0);
