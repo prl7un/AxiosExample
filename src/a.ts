@@ -29,3 +29,15 @@ let res : number[] = arr.map(function(i:string){
 
 let ar1: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 let res2: number[] = ar1.filter((v:number) => v%3 === 0);
+
+
+interface 도형넓이{
+  원: number
+  삼각형: number
+}
+
+interface 도형넓이2 extends 도형넓이{
+  사각형: number
+}
+
+let 도형넓이:도형넓이2 = {원:10, 삼각형:5, 사각형:7}
