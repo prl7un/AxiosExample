@@ -41,3 +41,13 @@ interface 도형넓이2 extends 도형넓이{
 }
 
 let 도형넓이:도형넓이2 = {원:10, 삼각형:5, 사각형:7}
+
+let { student, age} = {student : true, age : 20}
+
+function 여러가지문자입력(...str : string[]){ // rest파라미터
+  console.log(str)
+}
+
+let 배열1 = ['a', 'b', 'c', 'd'];
+let 배열2 = [...배열1, 'e', 'f', 'g', 'h'];
+console.log(배열2)
