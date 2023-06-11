@@ -51,3 +51,20 @@ function 여러가지문자입력(...str : string[]){ // rest파라미터
 let 배열1 = ['a', 'b', 'c', 'd'];
 let 배열2 = [...배열1, 'e', 'f', 'g', 'h'];
 console.log(배열2)
+
+type UserType = {
+  user:string, 
+  comment:number[], 
+  admin: boolean
+}
+
+
+type 어레이 = (number | string | boolean)[];
+
+function 함수([a,b,c]:어레이){
+  console.log(a, b, c)
+}
+
+let 변수1: never = 5; //number대입 불가능
+let 변수2: never | number = 5; //number 대입가능
+
