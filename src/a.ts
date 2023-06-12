@@ -68,10 +68,11 @@ function 함수([a,b,c]:어레이){
 let 변수1: never = 5; //number대입 불가능
 let 변수2: never | number = 5; //number 대입가능
 
-function 제네릭함수<T>(r:T):T[]{
+function 제네릭함수<T>(r:T):Array<T>{
   return [r, r, r];
 }
 
 제네릭함수(1)
 제네릭함수('2')
 제네릭함수(true)
+
