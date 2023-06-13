@@ -76,3 +76,12 @@ function 제네릭함수<T>(r:T):Array<T>{
 제네릭함수('2')
 제네릭함수(true)
 
+interface 인덱스<T>{
+  [index: string]: T
+}
+
+const 인덱스1: 인덱스<string> = {
+  "one": "hahaha",
+  "two": "hohoho",
+  "three": "hehehe"
+}
