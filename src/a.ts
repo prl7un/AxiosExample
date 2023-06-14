@@ -85,3 +85,9 @@ const 인덱스1: 인덱스<string> = {
   "two": "hohoho",
   "three": "hehehe"
 }
+
+function 제네릭함수2<T, K>(t:T, k:K):[K, K, T]{
+  return [k, k, t];
+}
+
+제네릭함수2<string, number>("aaa", 5)
