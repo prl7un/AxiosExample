@@ -91,3 +91,12 @@ function 제네릭함수2<T, K>(t:T, k:K):[K, K, T]{
 }
 
 제네릭함수2<string, number>("aaa", 5)
+
+interface 문자열{
+  color: string,
+  number? : number;
+}
+
+let 문자열1: 문자열 = {color: '주황'}
+let 문자열2: 문자열 = {color: '주황', number: 5}
+
