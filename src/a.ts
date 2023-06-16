@@ -100,3 +100,8 @@ interface 문자열{
 let 문자열1: 문자열 = {color: '주황'}
 let 문자열2: 문자열 = {color: '주황', number: 5}
 
+let 아무거나:[string, number?, number?, boolean?];
+
+아무거나 = ["hahaha"];
+아무거나 = ["hohoho", 5, 2];
+아무거나 = ["hehehe", 7, 23, false];
