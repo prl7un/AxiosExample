@@ -105,3 +105,21 @@ let 아무거나:[string, number?, number?, boolean?];
 아무거나 = ["hahaha"];
 아무거나 = ["hohoho", 5, 2];
 아무거나 = ["hehehe", 7, 23, false];
+
+
+
+interface CarType {
+  메뉴종류 : string,
+  price : number
+  주문가능여부: boolean;
+}
+
+class Menu implements CarType {
+  메뉴종류 : string;
+  price : number = 500;
+  주문가능여부 : boolean = true;
+  constructor(a :string){
+    this.메뉴종류 = a
+  }
+}
+let 붕붕이 = new Menu('볶음밥');
