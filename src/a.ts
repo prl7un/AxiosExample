@@ -123,3 +123,5 @@ class Menu implements CarType {
   }
 }
 let 붕붕이 = new Menu('볶음밥');
+
+type ggg<T extends string | boolean> = T extends string ? string : boolean;
