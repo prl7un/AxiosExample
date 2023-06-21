@@ -136,3 +136,14 @@ function 함수4523(animal: mongkey | cat){
   }
   return animal.fish
 }
+
+interface Obj{
+  [k: string]:string|number;
+}
+
+let obj1 : Obj = {
+  aaa : 35235,
+  bbb : '345346',
+  ccc : 'cccccc'
+}
+
