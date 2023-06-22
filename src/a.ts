@@ -147,3 +147,6 @@ let obj1 : Obj = {
   ccc : 'cccccc'
 }
 
+type key1 = keyof CarType
+let aaa:key1 = 'price'
+
