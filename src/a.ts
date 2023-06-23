@@ -150,3 +150,7 @@ let obj1 : Obj = {
 type key1 = keyof CarType
 let aaa:key1 = 'price'
 
+declare let i: number;
+declare let j: {age: number}
+console.log(i + 1)
+console.log(j)
