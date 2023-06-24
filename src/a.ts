@@ -154,3 +154,12 @@ declare let i: number;
 declare let j: {age: number}
 console.log(i + 1)
 console.log(j)
+
+class ggggg{
+  protected t = 15;
+}
+class h extends ggggg{
+  d(){
+    this.t = 560;
+  }
+}
