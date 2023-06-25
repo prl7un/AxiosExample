@@ -162,4 +162,10 @@ class h extends ggggg{
   d(){
     this.t = 560;
   }
+} 
+
+
+namespace n {
+  export type hh = boolean | string | number;
 }
+let dsfas: n.hh = true;
