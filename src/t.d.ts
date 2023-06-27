@@ -8,6 +8,11 @@ function J<T>(init1: T, init2: T): [T, T[]] {
   return [init1, arr];
 }
 
+interface ggggg{
+  aaa: string
+  bbb: null;
+  ccc: number;
+}
 
 type 함수타입1 = (t : boolean) => string;
 
