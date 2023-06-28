@@ -78,8 +78,10 @@ function 제네릭함수<T>(r:T):Array<T>{
 }
 
 제네릭함수(1)
+제네릭함수(5)
 제네릭함수('2')
 제네릭함수(true)
+
 
 interface 인덱스<T>{
   [index: string]: T
