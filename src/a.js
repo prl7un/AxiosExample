@@ -1,9 +1,11 @@
 import axios from "axios"
 
 async function a(){
-  await axios.get('https://jsonplaceholder.typicode.com/comments/5')
+
+  axios.defaults.baseURL = "https://jsonplaceholder.typicode.com"
+
+  await axios.get("/comments/3")
   .then((response)=>console.log(response.data.name))
 }
 
 a()
-dddd
