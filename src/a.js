@@ -1,11 +1,14 @@
 import axios from "axios"
 
-async function a(){
-
-  axios.defaults.baseURL = "https://jsonplaceholder.typicode.com"
-
-  await axios.get("/comments/3")
-  .then((response)=>console.log(response.data.name))
+const a = async () =>{
+  try{
+    axios.defaults.baseURL = "https://jsonplaceholder.typicode.com"
+    await axios.get("/comments/5")
+    .then((response)=>console.log(response.data.name))
+  }catch(err){
+    alert(err);
+  }
+  
 }
 
-a()
+export default a;
