@@ -1,5 +1,8 @@
 import axios from "axios"
 
+import React, {usememo} from 'react';
+
+
 
 axios.defaults.baseURL = "https://jsonplaceholder.typicode.com"
 
@@ -18,13 +21,17 @@ const E = async () =>{
 
 
 
-const B = () => {axios.all([A(), C(), E()])
-.then(axios.spread((res1, res2, res3) => {
+const B = () => {
+  
+  axios.all([A(), C(), E()])
+  .then(axios.spread((res1, res2, res3) => {
   console.log(res1.data.name);
   console.log(res2.data.name);
   console.log(res3.data.name);
+  let e = [res1.data.email, res2.data.email, res3.data.email];
+  console.log(e)
 })
 )
 }
 
-export default B;
+export default (B);
